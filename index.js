@@ -1,3 +1,4 @@
+document.body.style.overflow = "hidden";
 let button = document.querySelector(".showScroll");
 
 window.onscroll;
@@ -6,6 +7,13 @@ button.addEventListener("click", () => {
   button.disabled = true;
   button.classList.remove("active");
   runScrolls();
+});
+
+window.addEventListener("scroll", (evt) => {
+  if (isAutoScrolling) {
+    console.log("Скролл отключен");
+    evt.preventDefault();
+  }
 });
 
 function scroll(element) {
