@@ -49,3 +49,7 @@ p {
   opacity: 100;
   transition: all 1s;
 }
+
+.visually-hidden {
+  display: none;
+}
