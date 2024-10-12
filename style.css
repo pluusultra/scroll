@@ -1,0 +1,44 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(pink, purple, orange, green, blue);
+  background-color: #1e1e1e;
+  margin: 0;
+  color: white;
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 5rem;
+}
+
+body div {
+  outline: 1px solid red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showScroll {
+  padding: 30px;
+  background-color: black;
+  width: 200px;
+  color: white;
+  font-size: 1.5rem;
+  position: fixed;
+  top: calc(50% - 46px);
+  left: calc(50% - 100px);
+  cursor: pointer;
+  user-select: none;
+  opacity: 0;
+  transition: all 1s;
+}
+.showScroll:hover {
+  background-color: #6c6c6c;
+}
+
+.active {
+  display: block;
+  opacity: 100;
+  transition: all 1s;
+}
