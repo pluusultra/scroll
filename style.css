@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: linear-gradient(rgb(123, 186, 152), purple, orange, green, blue);
+  background: linear-gradient(rgb(197, 215, 41), purple, orange, green, blue);
   background-color: #1e1e1e;
   margin: 0;
   color: white;
@@ -23,40 +23,25 @@ p {
     linear-gradient(transparent, rgba(255, 255, 255, 0.2));
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  40% {
-    transform: rotate(15deg);
-  }
-  80% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
 .showScroll {
   padding: 30px;
-  background-color: rgba(93, 93, 93, 1);
+  background-color: transparent;
   width: 200px;
   color: white;
-  border: none;
+  border: 2px solid white;
   font-size: 1.5rem;
   position: fixed;
   top: calc(50% - 46px);
   left: calc(50% - 100px);
+  text-transform: uppercase;
   cursor: pointer;
   user-select: none;
   opacity: 0;
   transition: all 1s;
-  animation: rotate 2s infinite linear;
   z-index: 99;
 }
 .showScroll:hover {
-  background-color: #6c6c6c;
+  transform: scale(1.5);
 }
 
 .active {

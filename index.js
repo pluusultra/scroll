@@ -3,12 +3,15 @@ let button = document.querySelector(".showScroll");
 window.onscroll;
 
 button.addEventListener("click", () => {
+  button.disabled = true;
   button.classList.remove("active");
   runScrolls();
 });
 
-function scroll(value) {
-  window.scrollTo(0, value);
+function scroll(element) {
+  document.querySelector(`#${element}`).scrollIntoView({
+    behavior: "smooth",
+  });
 }
 
 function scrollWithDelay(pos, delay) {
@@ -21,13 +24,14 @@ function scrollWithDelay(pos, delay) {
 }
 
 async function runScrolls() {
-  await scrollWithDelay(4600, 500);
-  await scrollWithDelay(14720, 2000);
-  await scrollWithDelay(20267, 2000);
-  await scrollWithDelay(23880, 2000);
-  await scrollWithDelay(43261, 2000);
-  await scrollWithDelay(0, 2000);
+  await scrollWithDelay("anchor-1", 500);
+  await scrollWithDelay("anchor-2", 2000);
+  await scrollWithDelay("anchor-3", 2000);
+  await scrollWithDelay("anchor-4", 2000);
+  await scrollWithDelay("anchor-5", 2000);
+  await scrollWithDelay("anchor-6", 2000);
   await setTimeout(() => {
     button.classList.add("active");
+    button.disabled = false;
   }, 2000);
 }
